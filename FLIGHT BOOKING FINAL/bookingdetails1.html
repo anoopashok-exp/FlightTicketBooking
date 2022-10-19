@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <title>Booking page</title>
+    </head>
+    <body background="flight2.png" text="rgb">
+    <h1 align="center">Search for flights</h1>
+    <form action="print1.html" method="post">
+       <table>
+        <tr>
+            <td>
+                <label for="firstname">firstname</label>
+            </td>
+            <td>
+                <input type="text" id="firstname" name="firstname" placeholder="Firstname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="lastname">lastName</label>
+            </td>
+            <td>
+                <input type="text" id="lastname" name="lastname" placeholder="Lastname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="address">address</label>
+            </td>
+            <td>
+                <textarea id="address" name="address" placeholder="Enter your address" rows="6" cols="20"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="dateofbirth">Date of Birth"</label>
+            </td>
+            <td>
+                <input type="date" id="date" name="date">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="gender">Gender"</label>
+            </td>
+            <td>
+                <input type="radio" id="male" name="gender" value="1">Male
+                <input type="radio" id="female" name="gender" value="2">Female
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label for="Mobile">Mobile</label>
+            </td>
+            <td>
+                <input type="tel" id="mobile" name="mobile">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="email">Email</label>
+            </td>
+            <td>
+                <input type="email" id="email" name="email">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="username">Username</label>
+            </td>
+            <td>
+                <input type="text" id="username" name="username">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Password</label>
+            </td>
+            <td>
+                <input type="password" id="password" name="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="contact?">Can we contact you?</label>
+            </td>
+            <td>
+                <input type="radio" id="yes" name="contact" value="1">Yes
+                <input type="radio" id="no" name="contact" value="2">No
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="communication">Communication Preference</label>
+            </td>
+            <td>
+                <input type="checkbox" id="email" name="email" value="email">Email
+                <input type="checkbox" id="sms" name="sms" value="sms">SMS
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="checkbox" id="agree" name="agree" value="yes">
+                <label for="agree">  I agree to the <a href="#">terms and conditions</a> of the website</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" id="submit" name="submit" onclick="javascript:saveData();">
+            </td>
+            <td>
+                <input type="reset" id="reset" name="reset">
+            </td>
+        </tr>
+            
+       </table>  
+       </form>  
+       <script> 
+
+        function saveData(){ 
+     
+            var firstname = document.getElementById('firstname').value;
+     
+            var lastname = document.getElementById('lastname').value;
+     
+            var address = document.getElementById('address').value;
+     
+      
+            localStorage.setItem('firstname',firstname);
+     
+            localStorage.setItem('lastname',lastname);
+     
+            localStorage.setItem('address',address);
+            alert(firstname)
+     
+      
+     
+     } 
+     </script>
+    <a href="index.html">Back</a>
+    </body>
+</html>
